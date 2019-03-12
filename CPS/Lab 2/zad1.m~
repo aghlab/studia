@@ -29,4 +29,17 @@ m = abs(Xk);
 Xk(m<1e-4) = 0;
 p=unwrap(angle(Xk));
 
-f = (0:length(y
+f = (0:length(y)-1)*100/length(y);
+
+subplot(3,1,1)
+plot(f,m)
+title('Magnitude')
+
+subplot(3,1,2)
+plot()
+title('Gotowa funkcja')
+
+subplot(3,1,3)
+plot(f,p*180/pi)
+title('Phase')
+

@@ -31,10 +31,25 @@ p=unwrap(angle(Xk));
 
 f = (0:length(y)-1)*100/length(y);
 
-subplot(2,1,1)
-plot(f,m)
+figure(1)
+subplot(4,1,1)
+stem(f,m)
 title('Magnitude')
 
-subplot(2,1,2)
-plot(f,p*180/pi)
+subplot(4,1,2)
+stem(f,abs(fft(signal(t))),'r')
+title('Magnitude - Gotowa funkcja')
+
+subplot(4,1,3)
+stem(f,p*180/pi)
 title('Phase')
+
+Xo=fft(signal(t));
+Xo(m<1e-4) = 0;
+phs = angle(Xo);
+
+subplot(4,1,4)
+stem(f,phs/pi,'r')
+title('Phase Gotowa')
+
+figure(2)
