@@ -1,6 +1,9 @@
+
+% Narysuj widmo funkcji z poprzedniego zadania.
+
 %% Zad 2
 
-f = 2; %[Hz]
+f = 5; %[Hz]
 Fp = 100; %[Hz]
 n = 0:1:Fp-1; %100 próbek
 dts = 1/Fp; %[s]
@@ -47,3 +50,5 @@ plot(f(1:N/2+1),abs(X(1:N/2+1) / N/2));
 figure(3)
 f_axis = linspace(-N/2,N/2-1,N);
 plot(f_axis,abs(fftshift(X)));
+
+disp("Updated")

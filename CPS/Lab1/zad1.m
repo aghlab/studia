@@ -1,4 +1,3 @@
-function zad1()
 
 % Narysuj na jednym diagramie wykresy trzech przebiegów
 % sinusoidalnych o czestotliwo?sciach 5, 40, 65 Hz. 

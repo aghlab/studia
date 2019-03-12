@@ -1,7 +1,7 @@
 
-
 % Wykorzystujac twierdzenie Shannona, 
 % zasymuluj rekonstrukcje sygnalu sinusoidalnego.
+
 N = 100;
 f = 2; %[Hz]
 Fp = 100; %[Hz]
