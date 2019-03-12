@@ -1,0 +1,22 @@
+
+
+% Wykorzystujac twierdzenie Shannona, 
+% zasymuluj rekonstrukcje sygnalu sinusoidalnego
+
+
+f = 2; %[Hz]
+Fp = 100; %[Hz]
+n = 0:1:Fp-1; %100 próbek
+dts = 1/Fp; %[s]
+
+t = 0:dts:1;
+t(end) = [];
+y = sin(2*pi*f*n*dts);
+
+xx = 0;
+for n = 0:1:Fp-1
+   xx = y(n*dts)*sinc(pi*(t-n*dts)/dts);
+end
+
+
+s
